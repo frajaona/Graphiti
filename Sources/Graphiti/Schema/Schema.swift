@@ -18,6 +18,7 @@ final class SchemaThingy : TypeProvider {
     var graphQLTypeMap: [AnyType: GraphQLType] = [
         AnyType(Int.self): GraphQLInt,
         AnyType(Double.self): GraphQLFloat,
+        AnyType(Float.self): GraphQLFloat,
         AnyType(String.self): GraphQLString,
         AnyType(Bool.self): GraphQLBoolean,
     ]

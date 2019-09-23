@@ -201,4 +201,18 @@ extension Field where Arguments == NoArguments {
         
         self.init(name: name, at: function)
     }
+
+    public convenience init(
+        _ name: FieldKey,
+        with function: @escaping (ObjectType) -> ResolveType) {
+        let name = name.rawValue
+
+        let function: SyncResolve<ObjectType, Context, Arguments, ResolveType> = { type in
+            return { context, arguments in
+                return function(type)
+            }
+        }
+
+        self.init(name: name, at: function)
+    }
 }
