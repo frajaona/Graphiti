@@ -93,7 +93,7 @@ extension Schema {
                 operationName: operationName
             )
         } catch {
-            return eventLoopGroup.next().makeFailedFuture(error)
+            return eventLoopGroup.next().newFailedFuture(error: error)
         }
     }
 }
