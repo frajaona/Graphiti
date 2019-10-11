@@ -7,7 +7,7 @@ let package = Package(
         .library(name: "Graphiti", targets: ["Graphiti"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/frajaona/GraphQL.git", .branch("fix-boolean-serialization")),
+        .package(url: "https://github.com/frajaona/GraphQL.git", .branch("nio-2")),
         .package(url: "https://github.com/wickwirew/Runtime.git", .upToNextMinor(from: "2.1.0"))
     ],
     targets: [
